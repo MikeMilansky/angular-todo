@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { TodoListModule } from './todo-list/todo-list.module';
 import { HomeModule } from './home/home.module';
+import { RouterModule } from '@angular/router';
+import { ROUTES } from './app.routes';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,8 @@ import { HomeModule } from './home/home.module';
     BrowserModule,
     CoreModule,
     TodoListModule,
-    HomeModule
+    HomeModule,
+    RouterModule.forRoot(ROUTES)
   ],
   providers: [],
   bootstrap: [AppComponent]
